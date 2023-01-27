@@ -2,17 +2,24 @@
 /****** GENERAL STYLES ******************************/
 /****************************************************/
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+*:focus {
+    outline: none;
+    /* outline: 4px dotted #e67e22;
+    outline-offset: 8px; */
+    box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+}
+
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-family: 'Rubik', sans-serif;
     line-height: 1;
     font-weight: 400;
@@ -27,36 +34,36 @@ body{
 /* h1-h6*/
 .heading-primary,
 .heading-secondary,
-.heading-tertiary{
+.heading-tertiary {
     font-weight: 700;
-    color:#333;
+    color: #333;
     /* color: #2e1907; */
     /* color: #343a40; */
     letter-spacing: -1.5px;
 }
 
 /* h1 */
-.heading-primary{
+.heading-primary {
     font-size: 5.2rem;
     line-height: 1.1;
     margin-bottom: 3.2rem;
 }
 
 /*h2*/
-.heading-secondary{
+.heading-secondary {
     font-size: 4.4rem;
     line-height: 1.2;
     margin-bottom: 9.6rem;
 }
 
 /* h3 */
-.heading-tertiary{
+.heading-tertiary {
     font-size: 3rem;
     line-height: 1.2;
     margin-bottom: 3.2rem;
 }
 
-.subheading{
+.subheading {
     display: block;
     font-size: 1.6rem;
     font-weight: 500;
@@ -67,103 +74,121 @@ body{
 }
 
 /* buttons */
-.btn:link, .btn:visited{
+.btn,
+.btn:link,
+.btn:visited {
     font-size: 2rem;
     display: inline-block;
     padding: 1.6rem 3.2rem;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
+    border: none;
+    cursor: pointer;
 
     transition: all 0.3s;
 }
 
-.btn--full:link, .btn--full:visited{
+.btn--full:link, .btn--full:visited {
     background-color: #e67e22;
     color: #fff;
 }
-.btn--full:hover, .btn--full:active{
+
+.btn--full:hover, .btn--full:active {
     background-color: #cf711f;
 }
 
-.btn--outline:link, .btn--outline:visited{
+.btn--outline:link, .btn--outline:visited {
     background-color: #fff;
-    color:#555;
+    color: #555;
 }
-.btn--outline:hover, .btn--outline:active{
+
+.btn--outline:hover, .btn--outline:active {
     background-color: #fdf2e9;
-    box-shadow: inset 0 0 0 3px #fff ;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.btn--form:hover {
+    color: #555;
+    background-color: #fff;
 }
 
 /* links */
 .link:link,
-.link:visited{
+.link:visited {
     display: inline-block;
     padding-bottom: 3px;
-    color:#e67e22;
+    color: #e67e22;
     text-decoration: none;
     border-bottom: 1px solid currentColor;
     transition: all 0.3s;
 }
 
 .link:hover,
-link:visited{
+link:visited {
     color: #cf711f;
     border-bottom: 1px solid transparent;
 }
 
 /* margins */
-.margin-right-sm{
+.margin-right-sm {
     margin-right: 1.6rem !important;
 }
 
 /* grids */
-.container{
+.container {
     max-width: 120rem;
     padding: 0 3.2rem;
     margin: 0 auto;
 }
 
-.grid{
+.grid {
     display: grid;
     column-gap: 9.6rem;
     row-gap: 6.4rem;
 }
 
-.grid:not(:last-child){
+.grid:not(:last-child) {
     margin-bottom: 9.6rem;
 }
 
-.grid--2-cols{
+.grid--2-cols {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.grid--3-cols{
+.grid--3-cols {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.grid--4-cols{
+.grid--4-cols {
     grid-template-columns: repeat(4, 1fr);
 }
 
-.grid--center-v{
+.grid--center-v {
     align-items: center;
 }
 
-.margin-bottom-md{
+.margin-bottom-md {
     margin-bottom: 4.8rem !important;
 }
 
-strong{
+strong {
     font-weight: 500;
 }
 
-.center-text{
+.center-text {
     text-align: center;
 }
 
 /* lists */
-.list{
+.list {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -171,14 +196,14 @@ strong{
     gap: 1.6rem;
 }
 
-.list-item{
+.list-item {
     font-size: 1.8rem;
     display: flex;
     align-items: center;
     gap: 1.6rem;
 }
 
-.list-icon{
+.list-icon {
     height: 3rem;
     width: 3rem;
     color: #e67e22
